@@ -3,7 +3,9 @@ body, p {
     font-family: Arial;
     box-sizing: border-box;
 }
-
+p{
+  cursor:pointer;
+}
 #app{
     width: 100%;
 }
@@ -138,7 +140,7 @@ body, p {
   float:left;
 }
 .headerSearchBox{
-  width:60%;
+  width:65%;
   float:left;
 }
 .searchImageIcon{
@@ -147,20 +149,60 @@ body, p {
     top: 5px;
 }
 .headePanelSearchBox{
-    height: 25px;
-    border-radius: 15px;
-    border: 1px solid #c3c3c3;
-    width: 400px;
-    padding-left: 5%
+  height: 25px;
+  border-radius: 15px;
+  border: 1px solid #c3c3c3;
+  width: 400px;
+  padding-left: 5%
 }
 .userProfileSection{
-  width:10%;
+  width:5%;
   float:left;
+  position: relative;
+    top: -5px;
 }
 .headerEmptyBorderDiv{
   width:100%;
   height:30px;
   background-color: #D3D3D3
+}
+.userProfileImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profileContainer{
+  position: absolute;
+    top: 62px;
+    right: 15px;
+    background: #c3c3c3;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.profileDetails{
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+.profilelabel{
+  font-size: 12px;
+  color:#000;
+}
+.profileName{
+  color:#0a5a6f;
+  font-size: 16px;
+  margin:0 0 10px;
+  font-weight: 600
+}
+.profileLogout{
+  padding: 10px 20px;
+    background: #e50000;
+    color: #0a5a6f;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /*end of header */
@@ -482,3 +524,136 @@ body, p {
   .optionsPanelContainer p:hover{
     background: #05b577;
   }
+
+
+
+
+
+
+
+
+
+  /* start of login */
+
+.loginContainer{
+    background: #333;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    position: fixed;
+}
+.loginContainer a{
+  text-decoration: none;
+  color: rgb(46, 109, 164);
+  cursor: pointer;
+}
+.form_bg{
+  background-color: #eee;
+    color: #666;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid #fff;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 420px;
+    height: 320px;
+}
+.text-center {
+    text-align: center;
+}
+.h2, h2 {
+    font-size: 30px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.loginInputDiv{
+  margin:2% 0;
+}
+.loginInputDiv2{
+  margin:2% 0 5%;
+}
+.form-control {
+    display: block;
+    width: 96%;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: rgb(85, 85, 85);
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset;
+    padding: 1% 2%;
+    border: 1px solid rgb(204, 204, 204);
+    border-image: initial;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.loginButton{
+  width:100%;
+  display: block;
+  font-size: 18px;
+  line-height: 1.33333;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 122, 183);
+  border-color: rgb(46, 109, 164);
+  cursor:pointer;
+}
+.signUpLabel{
+  float:right;
+  margin-top: 10%;
+}
+ /* end of login */
+
+ /* start of signup */
+
+.signUpContainer{
+    background: #333;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    position: fixed;
+}
+.signup-control{
+  display: block;
+  width:100%;
+  height: 34px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: rgb(85, 85, 85);
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset;
+  padding: 0 1%;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+}
+.nameFieldWidth{
+  width:100%;
+}
+.nameField1{
+ width:49%;
+ float:left;
+}
+.nameField2{
+  width:49%;
+  float:left;
+  margin-left: 2%
+}
+.nameField3{
+  width:100%;
+  margin:2% 0;
+}
+
+  /* end of signup */
+
+  

@@ -4,6 +4,28 @@ import {default as If} from '../Functionals/If';
 import {deleteUserComment, changeCommentStatus} from '../../actions/commentActions';
 import {showCommentEditBox} from '../../actions/sideBarActions';
 class OptionsPanel extends Component{
+	constructor(props) {
+        super(props);
+
+        this.setWrapperRef = this.setWrapperRef.bind(this);           
+        this.handleClickOutside = this.handleClickOutside.bind(this);
+    }
+
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClickOutside);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+    setWrapperRef(node) {
+        this.wrapperRef = node;
+    }
+    handleClickOutside(event) {
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+           this.props.hideOptionPanel()
+        }
+    }
 	replyOnComment(){
 		this.props.replyCommentPanel()
 	}
@@ -22,8 +44,8 @@ class OptionsPanel extends Component{
 	}
 	render(){
 		return(
-			<div>
-				<div>
+			
+				<div ref={this.setWrapperRef}>
 					<div className="optionsPanelContainer">
 						<p onClick={this.replyOnComment.bind(this)}>Reply</p>
 						
@@ -34,10 +56,11 @@ class OptionsPanel extends Component{
 						<p>Assign</p>
 						<p onClick={this.deleteOnComment.bind(this)}>Delete</p>
 					</div>
+					<div className="clr"></div>
 				</div>
 			
-				<div className="clr"></div>
-			</div>
+				
+			
 		);
 	}
 }

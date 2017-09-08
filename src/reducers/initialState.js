@@ -8,6 +8,7 @@ export default {
   elementDesc:{
   	id:null,
   	position:null
-  }
+  },
+  getUser:{}
 
 };
