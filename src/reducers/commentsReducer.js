@@ -19,13 +19,12 @@ export default function commentsReducer(state = initialState.commentsData, actio
     
     case types.DELETE_COMMENT_SUCCESS:
       return state.filter(comment =>comment.id !== action.id)
-    // case types.CHANGE_COMMENT_RESPONSE_SUCCESS:
-      
-    //    return [
-    //       ...state.map(commentData =>
-    //         commentData.id === action.commentId ? ( {...commentData,commentData['status']: action.ticketStatus} ) :commentData
-    //       )
-    //    ]
+
+    case types.CHANGE_COMMENT_RESPONSE_SUCCESS:
+      return [
+          ...state.filter(comment => comment.id !== action.comment.id),
+          Object.assign({}, action.comment)
+        ];
     default:
       return state;
   }

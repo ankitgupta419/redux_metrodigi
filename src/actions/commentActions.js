@@ -5,7 +5,7 @@ export const loadCommentsSuccess = (commentsData) => ({type: types.LOAD_COMMENT_
 export const createCommentSuccess = (comment) => ({type: types.CREATE_COMMENT_SUCCESS, comment});
 export const editCommentSuccess = (comment) => ({type: types.EDIT_COMMENT_SUCCESS, comment});
 export const deleteCommentSuccess = (id) => ({type: types.DELETE_COMMENT_SUCCESS, id});
-
+export const changeResponseSuccess = (comment) => ({type: types.CHANGE_COMMENT_RESPONSE_SUCCESS, comment});
 
 export function loadComments() {
   return function(dispatch) {
@@ -55,16 +55,17 @@ export function deleteUserComment(deleteId,createdUser) {
     });
   };
 }
-// export function changeCommentStatus(ticketStatus,commentId) {
-//   return function(dispatch) {
-//     return CommentsApi.changeCommentStatus(ticketStatus,commentId).then(response => {
-//       dispatch(changeResponseSuccess(response));
-//       return response;
-//     }).catch(error => {
-//       throw(error);
-//     });
+
+export function changeCommentStatus(ticketStatus,commentId) {
+  return function(dispatch) {
+    return CommentsApi.changeCommentStatus(ticketStatus,commentId).then((response) => {
+      dispatch(changeResponseSuccess(response));
+      // return response;
+    }).catch(error => {
+      throw(error);
+    });
     
      
-//   };
-// }
-export const changeCommentStatus = (ticketStatus,commentId) => ({type: types.CHANGE_COMMENT_RESPONSE_SUCCESS, ticketStatus,commentId});
+  };
+}
+// export const changeCommentStatus = (ticketStatus,commentId) => ({type: types.CHANGE_COMMENT_RESPONSE_SUCCESS, ticketStatus,commentId});

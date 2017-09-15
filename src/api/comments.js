@@ -184,21 +184,19 @@ class CommentsApi {
          arr.splice(existingCourseIndex, 1, comment);
           resolve(comment);
     });
+    // return [
+    //     ...state.filter(comment => comment.id !== action.comment.id),
+    //     Object.assign({}, action.comment)
+    //   ];
 
   }
  
   static deleteUserComment(deleteId, createdUser) {
     return new Promise((resolve, reject) => {
         let arr=commentsData.mgmtinfo.comments.slice()
-         let index=null
-         for(var i=0;i<arr.length;i++){
-            if(arr[i].id==deleteId){
-               index=i
-            }
-         }
+        const deleteIndex = arr.findIndex(a => a.id == deleteId);
         
-
-       arr.splice(index,1);
+       arr.splice(deleteIndex,1);
         resolve(deleteId);
     });
   }
@@ -217,17 +215,11 @@ class CommentsApi {
   }
   static changeCommentStatus(ticketStatus,commentId) {
       let arr=commentsData.mgmtinfo.comments.slice()
-      let index=null
-      for(var i=0;i<arr.length;i++){
-         if(arr[i].id==commentId){
-            index=i
-         }
-      }
-   
+    const changeIndex = arr.findIndex(a => a.id == commentId);
     return new Promise((resolve, reject) => {
-         let replyDataArray=commentsData.mgmtinfo.comments[index]
+         let replyDataArray=commentsData.mgmtinfo.comments[changeIndex]
           replyDataArray['status']=ticketStatus;
-         
+         resolve(replyDataArray);
     });
   }
 

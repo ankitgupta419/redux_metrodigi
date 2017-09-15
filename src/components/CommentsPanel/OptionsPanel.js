@@ -30,6 +30,7 @@ class OptionsPanel extends Component{
 		this.props.replyCommentPanel()
 	}
 	statusOnComment(key){
+		
 		this.props.hideOptionPanel()
 		this.props.changeCommentStatus(key,this.props.commentId);
 	}

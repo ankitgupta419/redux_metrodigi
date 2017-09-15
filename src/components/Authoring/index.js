@@ -28,11 +28,11 @@ class AuthoringPage extends Component{
 					<div className="leftToolbarIcons"><img src={LocationImg} /></div>
 					<div className="leftToolbarIcons"><img src={isShowPanel?DraftCircleImg:DraftInitialImg} onClick={this.showComment.bind(this)}/></div>	
 				</div>
-				<div className="pageContainer">
+				<div className={isShowPanel?"pageContainer open":"pageContainer"}>
 					<Page />	
 				</div>	
 				<If test={isShowPanel}>
-					<div className="CommentsPanelContainer">
+					<div className={isShowPanel?"CommentsPanelContainer open":"CommentsPanelContainer"}>
 						<CommentsPanel />		
 					</div>
 				</If>
@@ -40,7 +40,7 @@ class AuthoringPage extends Component{
 					<div className="profileContainer">
 							<div className="profileDetails">
 								<div className="profilelabel">signed in as</div>
-								<div className="profileName">{getUser.username}</div>
+								<div className="profileName">{getUser.name}</div>
 							</div>
 							<div className="profileLogout" onClick={this.logOutUser.bind(this)}>Logout</div>
 						</div>

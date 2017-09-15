@@ -129,7 +129,8 @@ class Page extends Component{
 							</div>*/}
 							
 						
-							<h2 className="writeTodoLHeaderLabel">The Ascent of Xyleme Sap</h2>		
+							<h2 className="writeTodoLHeaderLabel">The Ascent of Xyleme Sap</h2>	
+								
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu ipsum feugiat, ultrices tortor in, malesuada felis. Quisque molestie, elit quis fer mentum mollis, dui dolor tincidunt eros, ut porttitor lacus ante non nibh. Fuce dictum odio eu metus mollis fermentum. Sed non nulla erat. Praesent dictum nec metus sit amet imperdiet. Morbi laoreet tristique mi eget congue. Duis commodo fringilla pulvinar. Curabitur quis turpis aliquam, vulputate nisi ac, blandit nulla. Donec sed magna ut urna condimentum rutrum ut sit amet eros. Fusce orci erat, molestie ac nunc ac, tristique porta dolor. Nam rutrum tellus felis, non convallis sapien ultricies a. Nulla dictum odio sem, non tempus elit dictum vel.
 							</p>	
@@ -145,7 +146,8 @@ class Page extends Component{
 							<p>
 								 Sed non nulla erat. Praesent dictum nec metus sit amet imperdiet. Morbi laoreet t<span>ristique mi eget congue. Duis commodo fringilla pulvinar. Curabitur quis turpis aliquam, vulputate nisi ac, blan</span>dit nulla. Donec sed magna ut urna condimentum rutrum ut sit amet eros. Fusce orci erat, molestie ac nunc ac, tristique porta dolor. Nam rutrum tellus felis, non convallis sapien ultricies a. Nulla dictum odio sem, non tempus elit dictum vel.
 							</p>	
-							
+							<p></p>
+							<p>s</p>
 							<If test={this.props.commentEditBox.showCommentBox}>
 								<Comment eventId={this.state.eventId} storeParagraphIds={this.storeParagraphIds}/>	
 							</If>

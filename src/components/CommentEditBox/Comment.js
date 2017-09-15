@@ -70,7 +70,7 @@ class Comment extends Component{
 		summary['createddate']=getDate
 		let latestData=Object.assign({}, summary)
 		this.props.actions.commentActions.editComment(latestData);
-		this.props.actions.sideBarActions.showCommentEditBox(false,latestData);
+		//this.props.actions.sideBarActions.showCommentEditBox(false,latestData);
 	}
 	commentContainerClose(){
 		this.props.actions.sideBarActions.showCommentEditBox(false,null);
@@ -108,7 +108,7 @@ Comment.propTypes = {
 };
 
 function mapStateToProps(state) {
-  // console.log("comment",state)
+  console.log("comment",state)
   return {
     commentEditBox:state.commentEditBox,
     sideBarById:state.sideBarById
