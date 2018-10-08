@@ -24,8 +24,11 @@ class SignUp extends Component{
 		                		<div className="nameField2"><input type="text" className="signup-control" placeholder="Confirm Password"  /></div>
 		                		<div className="clr"></div>
 		                	</div>
+							
 		                </div>
-		                
+		                <div className="">
+								<button type="submit" className="loginButton" id="signup">Sign up</button>
+						</div>
 		   
 		                <div className="clr"></div> 
 			        </div>

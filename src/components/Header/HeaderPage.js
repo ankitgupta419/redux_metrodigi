@@ -34,7 +34,7 @@ class Header extends Component{
 				<div className="headerContent">
 					<div className="headerMenuIcon"><img src={menuIcon} /> </div>
 					<div className="headerTitleLabel">Project title goes here</div>
-					<div className="headerSearchBox"><span><img className="searchImageIcon" src={searchIcon} /></span><span><input type="text" className="headePanelSearchBox" /></span></div>
+					<div className="headerSearchBox"><span><img className="searchImageIcon" src={searchIcon} /></span><span><input type="text" className="headePanelSearchBox not-active" /></span></div>
 					<div className="userProfileSection">
 						<span><img className="userProfileImg" src={getUser.profile_img!=null?getUser.profile_img :profileIcon} onClick={this.seeProfilePanel.bind(this)} /></span>
 					</div>

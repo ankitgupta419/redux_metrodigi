@@ -695,3 +695,9 @@ p{
   /* end of signup */
 
   
+  .not-active {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: black;
+  }

@@ -25,7 +25,7 @@ class AuthoringPage extends Component{
 		return(
 			<div className="authoringContainer">
 				<div className="leftToolbar">
-					<div className="leftToolbarIcons"><img src={LocationImg} /></div>
+					{/*<div className="leftToolbarIcons"><img src={LocationImg} /></div>*/}
 					<div className="leftToolbarIcons"><img src={isShowPanel?DraftCircleImg:DraftInitialImg} onClick={this.showComment.bind(this)}/></div>	
 				</div>
 				<div className={isShowPanel?"pageContainer open":"pageContainer"}>
